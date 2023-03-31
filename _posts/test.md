@@ -1,7 +1,7 @@
 ---
 title: Test post
 date: 2023-03-31 11:00:00 
-categories: 
+categories: [test]
 tags: [test]
 ---
 
