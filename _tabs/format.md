@@ -1,10 +1,9 @@
 ---
 # the default layout is 'page'
+title: Author Formatting Guide
 icon: fas fa-info-circle
 order: 4
 ---
-
-# Author Formatting Guide
 
 Each summary should contain the following information: 
 

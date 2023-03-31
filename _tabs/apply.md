@@ -1,20 +1,19 @@
 ---
 # the default layout is 'page'
+title: Apply to Write for the Library
 icon: fas fa-info-circle
 order: 4
 ---
 
-# About
+The Polarization Research Lab believes in the transparency and accessibility of research and data, and we hope for our Lab and website to be a source of usable information and a repository for research on these topics outside of a paywall. 
 
-The Library of Partisan Animosity is a free resource for learning about partisan animosity for scholars, educators, students and practitioners. The library covers the top articles about polarization from 2000-present with a focus on the United States and future expansion to other countries.
+This project will create readable short summaries for publications on partisan animosity. Stored on our website, users will be able to read and learn about affective polarization, democratic norms, political violence, etc. in one place. We imagine users will be academics and graduate students writing literature reviews, undergraduates and even high school students first learning about these topics, and practitioners. As such, the summaries need to be written in a way that can speak to this diverse audience. 
 
-One of the Lab’s top goals is to provide transparent and accessible research and information about topics of partisan animosity, including affective polarization, social trust and political violence. A breakdown in the dissemination of political science research to practitioners, media and citizens often occurs due to a lack of a centralized hub, inaccessible academic language and journal articles behind expensive paywalls. The Library of Partisan Animosity is the first-of-its-kind effort to bridge this gap by creating a free resource that is easy to navigate and clearly translates the key research and findings. 
+As an author, we ask that you use the style and format laid out below and commit to our tracking process. You will be paid $300 for each summary you satisfactorily complete. 
 
-Library summaries are written by academics with deep knowledge of American politics and research methodology while also using clear and accessible language.
+## How to apply
 
-The Library includes: 
-
-Summaries of the top academic journal articles from the past 20 years on partisan animosity 
-Links to the full journal article and citation information 
-Links to replication data 
-Information about the methodology and experiment(s) used in the paper
+Find a set of five articles you would be willing to review (you can pick from this list or suggest one using the article criteria below).  We will pick one of your suggestions or work with you to identify an article from our list.
+Submit an application (it is short: your name, your preferred articles and a writing sample).
+Note: You can only work on one paper at a time.
+Note: You can only work on papers that you have not written.  You should not have worked with any of the authors of a paper you are summarizing within the last five years.
