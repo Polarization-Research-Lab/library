@@ -20,7 +20,7 @@ timezone: America/New_York
 
 title:  # the main title
 
-tagline: Library of Partisan Animosity # it will display as the sub-title
+tagline: # Library of Partisan Animosity # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
  A collection of summarized articles on political animosity.
@@ -81,7 +81,7 @@ theme_mode: # [light|dark]
 img_cdn: ""
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/assets/logo.png"
+avatar: # "/assets/logo.png"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
