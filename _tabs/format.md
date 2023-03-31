@@ -1,9 +1,10 @@
 ---
 # the default layout is 'page'
-title: Author Formatting Guide
 icon: fas fa-info-circle
 order: 4
 ---
+
+## Author Formatting Guide
 
 Each summary should contain the following information: 
 
@@ -36,11 +37,11 @@ Each summary should contain the following information:
   - Is the data available? 
 16. Link to replication data and scripts (if available). 
 
-## Writing Style 
+### Writing Style 
 
 The goals of the summaries are clarity, accessibility, and transparency. While academics may read these summaries, our target audience for the writing style and language is an undergraduate or advanced high school student. We want to remove academic jargon as much as possible, and explain concepts and findings using words that you might find in a textbook or well-researched newspaper article. If academic terms are critical for the summary, be sure to explain them and provide examples of what they mean. For example, you might say that “political elites” can include current and former elected officials. 
 
-## Citation Style 
+### Citation Style 
 
 APA and .bib file
 
