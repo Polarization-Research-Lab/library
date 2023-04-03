@@ -18,7 +18,7 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title:  # the main title
+title: Library of Partisan Animosity # the main title
 
 tagline: # Library of Partisan Animosity # it will display as the sub-title
 
@@ -117,7 +117,7 @@ assets:
 pwa:
   enabled: true # the option for PWA feature
 
-paginate: 10
+paginate: 30
 
 # ------------ The following options are not recommended to be modified ------------------
 

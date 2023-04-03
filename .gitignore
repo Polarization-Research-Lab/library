@@ -22,5 +22,5 @@ package-lock.json
 assets/js/dist
 
 # User Added (us, the PRL)
-.tmp/
+.shadow/
 .DS_Store

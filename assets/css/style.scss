@@ -1,0 +1,45 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@import "{{ site.theme }}";
+
+/* append your custom style below */
+.card {
+  // height: 10px
+}
+
+table {
+  width: 100%
+}
+
+tr {
+  border-bottom: 1px solid var(--btn-paginator-border-color);
+}
+
+.tr_:hover { 
+  background: var(--btn-paginator-hover-color); 
+}
+
+th {
+   color: var(--post-list-text-color);
+   font-weight: bold;
+   // text-align: center;
+   padding: 16px; 
+}
+
+td a { 
+   display: block; 
+   // border: 1px solid black;
+   padding: 16px; 
+   color: var(--post-list-text-color);
+}
+
+a:hover {
+  color: var(--post-list-text-color);
+}
