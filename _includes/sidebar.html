@@ -22,8 +22,7 @@
     </div>
 
     <div class="site-title">
-      <!-- <a href="{{ '/' | relative_url }}">{{ site.title }}</a> --> <!-- << old version -->
-      <a href="{{ '/' | relative_url }}"></a>
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
     <div class="site-subtitle font-italic">{{ site.tagline }}</div>
 
@@ -40,6 +39,9 @@
     </li>
     <!-- the real tabs -->
     {% for tab in site.tabs %}
+
+    {% if tab.url != '/categories/' %}
+
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
         <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>
@@ -48,6 +50,9 @@
         <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->
+
+    {% endif %}
+
     {% endfor %}
 
   </ul> <!-- ul.nav.flex-column -->
