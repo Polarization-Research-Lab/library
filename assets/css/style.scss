@@ -43,3 +43,17 @@ td a {
 a:hover {
   color: var(--post-list-text-color);
 }
+
+
+/* --- add some top spacing to the top-bar; looks a little nicer when we embed in wordpress --- */
+#topbar-wrapper {
+  height: 60px;
+
+  [data-topbar-visible='false'] & {
+    top: -60px; /* same as topbar height. */
+  }
+}
+
+#search-wrapper {
+  margin-top: 10px
+}

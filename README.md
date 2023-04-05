@@ -25,3 +25,23 @@ title: PRL Library
 
 This repo is a fork of the [Chirpy Theme](https://img.shields.io/gem/v/jekyll-theme-chirpy) by [cotes2020](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)
 
+---
+
+# Notes
+
+Build with warning boxes:
+
+> **Did the study rely on proxy variables to measure polarization?**: 
+> 
+> {Polarization Proxies}
+{{: .prompt-danger }}
+
+> **Were standard p-value thresholds used (p<.05 or 95% Confidence Intervals that don’t overlap zero)?**: 
+>
+> {Inference Metrics}
+{{: .prompt-danger }}
+
+> **Were correlational results interpreted with causal language?**: 
+>
+> {Causal Claims from Correlational Data}
+{{: .prompt-danger }}
