@@ -53,4 +53,4 @@ APA and .bib file
 
 Example: 
 
-PETERSON, E., & KAGALWALA, A. (2021). When Unfamiliarity Breeds Contempt: How Partisan Selective Exposure Sustains Oppositional Media Hostility. American Political Science Review, 115(2), 585-598. doi:10.1017/S0003055420001124
+PETERSON, E., & KAGALWALA, A. (2021). When Unfamiliarity Breeds Contempt: How Partisan Selective Exposure Sustains Oppositional Media Hostility. _American Political Science Review, 115_(2), 585-598. doi:10.1017/S0003055420001124
