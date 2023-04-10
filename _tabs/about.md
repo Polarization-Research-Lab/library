@@ -12,7 +12,7 @@ Library summaries are written by academics with deep knowledge of American polit
 
 The Library includes: 
 
-Summaries of the top academic journal articles from the past 20 years on partisan animosity 
-Links to the full journal article and citation information 
-Links to replication data 
-Information about the methodology and experiment(s) used in the paper
+- Summaries of the top academic journal articles from the past 20 years on partisan animosity 
+- Links to the full journal article and citation information 
+- Links to replication data 
+- Information about the methodology and experiment(s) used in the paper
