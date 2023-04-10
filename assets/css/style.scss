@@ -14,6 +14,10 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
   // height: 10px
 }
 
+body {
+  font-family: helvetica;
+}
+
 table {
   width: 100%
 }
@@ -57,3 +61,4 @@ a:hover {
 #search-wrapper {
   margin-top: 10px
 }
+
