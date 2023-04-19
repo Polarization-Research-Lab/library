@@ -49,8 +49,6 @@ The goals of the summaries are clarity, accessibility, and transparency. While a
 
 ### Citation Style 
 
-APA and .bib file
-
-Example: 
+Use [APA-style](https://en.wikipedia.org/wiki/APA_style) citations. Example: 
 
 PETERSON, E., & KAGALWALA, A. (2021). When Unfamiliarity Breeds Contempt: How Partisan Selective Exposure Sustains Oppositional Media Hostility. _American Political Science Review, 115_(2), 585-598. doi:10.1017/S0003055420001124
