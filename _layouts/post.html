@@ -12,9 +12,11 @@ tail_includes:
 <h1 data-toc-skip>{{ page.title }}</h1>
 
 <h2>{{ page.author }}</h2>
-<p>In <a href = "{{ page.journal_link }}"><em>{{ page.journal }}</em></a></p>
+{% if page.journal_link %}<p>In <a href = "{{ page.journal_link }}"><em>{{ page.journal }}</em></a></p>{% else %}<p>In <em>{{ page.journal }}</em></p>{% endif %}
+
 <p>Published: {{ page.publication_date }}</p>
-{% if page.author_link %}<p><a href = "{{ page.author_link }}">Author's Website</a></p>{% endif %}
+
+{% if page.author_link %}<p><a href = "{{ page.author_link }}">Author's Link to Article</a></p>{% endif %}
 
 <div class="post-meta text-muted">
 
