@@ -46,13 +46,18 @@ layout: page
       <th>Title</th>
       <th>Article Publication Date</th>
       <th>Tags</th>
+      <th>Pre-<br>registered</th>
+      <th>Open Data</th>
       </a>
     </tr>
+
     {% for post in posts %}
       <tr class = 'tr_'>
         <td><a class = "aa" href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
         <td><a class = "aa" href="{{ post.url | relative_url }}">{% include datetime.html date=post.date %}</a></td>
-        <td><a class = "aa" href="{{ post.url | relative_url }}">{{ post.tags }}</a></td>
+        <td><a class = "aa" href="{{ post.url | relative_url }}" style="overflow: auto; width: 100px;">{{ post.tags }}</a></td>
+        <td><a class = "aa" href="{{ post.url | relative_url }}" style="text-align: center;">{{ post.pre_reg }}</a></td>
+        <td><a class = "aa" href="{{ post.url | relative_url }}" style="text-align: center;">{{ post.open_data }}</a></td>
       </tr>
 
 
