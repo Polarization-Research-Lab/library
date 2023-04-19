@@ -49,6 +49,6 @@ The goals of the summaries are clarity, accessibility, and transparency. While a
 
 ### Citation Style 
 
-Use <a href='https://en.wikipedia.org/wiki/APA_style' target="_blank">APA-style</a> citations. Example: 
+Use <a href='https://en.wikipedia.org/wiki/APA_style' target="_parent">APA-style</a> citations. Example: 
 
 PETERSON, E., & KAGALWALA, A. (2021). When Unfamiliarity Breeds Contempt: How Partisan Selective Exposure Sustains Oppositional Media Hostility. _American Political Science Review, 115_(2), 585-598. doi:10.1017/S0003055420001124
