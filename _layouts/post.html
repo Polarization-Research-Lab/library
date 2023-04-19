@@ -112,21 +112,23 @@ tail_includes:
 
   <div class="post-tail-bottom
     d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
-    <div class="license-wrapper">
 
-      {% if site.data.locales[site.lang].copyright.license.template %}
+<!--     <div class="license-wrapper">
 
-        {% capture _replacement %}
-        <a href="{{ site.data.locales[site.lang].copyright.license.link }}">
-          {{ site.data.locales[site.lang].copyright.license.name }}
+      [[% if site.data.locales[site.lang].copyright.license.template %]
+
+        [[% capture _replacement %]
+        <a href="[[[[ site.data.locales[site.lang].copyright.license.link ]">
+          [[ site.data.locales[site.lang].copyright.license.name ]]
         </a>
-        {% endcapture %}
+        [[% endcapture %]
 
-        {{ site.data.locales[site.lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
+        [[ site.data.locales[site.lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement ]]
 
-      {% endif %}
+      [[% endif %]
     </div>
 
+ -->
     {% include post-sharing.html %}
 
   </div><!-- .post-tail-bottom -->
