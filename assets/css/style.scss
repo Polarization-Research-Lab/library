@@ -51,7 +51,7 @@ a:hover {
 
 /* --- add some top spacing to the top-bar; looks a little nicer when we embed in wordpress --- */
 #topbar-wrapper {
-  height: 60px;
+  height: 70px;
 
   [data-topbar-visible='false'] & {
     top: -60px; /* same as topbar height. */
@@ -59,6 +59,23 @@ a:hover {
 }
 
 #search-wrapper {
-  margin-top: 10px
+  // margin-top: 10px
 }
 
+blockquote {
+  @include prompt('tip', '✔', 'regular');
+}
+
+#sidebar {
+   width: 220px;
+}
+
+#main {
+  margin-left: 0px;
+  width: 100%;
+}
+
+#main-wrapper {
+  margin-right: 0px;
+  // margin-left: 0px;
+}

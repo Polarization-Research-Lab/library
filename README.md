@@ -34,7 +34,7 @@ Build with warning boxes:
 > **Did the study rely on proxy variables to measure polarization?**: 
 > 
 > {Polarization Proxies}
-{{: .prompt-danger }}
+{{: .prompt-tip }}
 
 > **Were standard p-value thresholds used (p<.05 or 95% Confidence Intervals that don’t overlap zero)?**: 
 >
