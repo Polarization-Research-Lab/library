@@ -13,5 +13,6 @@ data = google_sheet_pull.pull(
     spreadsheet_name_and_range,
     '../../../.secrets/google sheets token.json', # <-- token file path
 )
+data = data.sort_values('term')
 data = data.set_index('term')
-data['definition'].to_json('../_data/glossary.json', indent = 4)
+data['definition'].to_json('../_data/glossary.json')

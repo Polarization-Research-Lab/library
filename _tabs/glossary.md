@@ -6,6 +6,7 @@ order: 7
 
 
 {% for entry in site.data.glossary %}
+
 ## {{ entry[0] }}
 
 {{ entry[1] }}
