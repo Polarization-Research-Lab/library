@@ -81,12 +81,13 @@ blockquote {
 }
 
 #defbox {
-  background-color: rgba(0,0,0,0);
-  max-width: 500px;
-  height: 180px;
-  opacity: 0;
-  position: absolute;
   display: none;
+  position: absolute;
+  max-width: 500px;
+  height: 250px;
+
+  background-color: rgba(0,0,0,0);
+  opacity: 0;
   transition: opacity 400ms;
   transition-delay: .5s;
 }
@@ -96,17 +97,18 @@ blockquote {
 }
 
 #defbox-text {
+  padding: 10px;
+  
+  height: 200px;
+  width: 300px;
+  bottom: -15px;
+  position: relative;
+
   background-color: rgba(0,0,0,.8);
-  max-height: 150px;
-  min-height: 150px;
-
-  width: 200px;
-
+  font-size: 18px;
   color: white;
-  bottom: 30px;
   border-radius: 10px;
   word-wrap: normal;
-  padding: 10px;
   overflow-y: scroll;
 }
 

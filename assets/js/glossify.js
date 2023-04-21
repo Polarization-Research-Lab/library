@@ -11,10 +11,10 @@ fetch('/library//assets/glossary.json')
                 defbox.style.display = 'block'
 
                 defbox.style.width = (this.offsetWidth + 40) + 'px'
-                defbox.style.top = (this.offsetTop - 150) + 'px'
+                defbox.style.top = (this.offsetTop - 220) + 'px'
                 defbox.style.left = (this.offsetLeft - 20) + 'px'
                 
-                document.getElementById('defbox-text').innerHTML = '<p><b>' + this.dataset.key + '</b></p>' + glossary[this.dataset.key]
+                document.getElementById('defbox-text').innerHTML = '<p><u><b>' + this.dataset.key + '</u></b></p>' + glossary[this.dataset.key]
             }
         }
     }
