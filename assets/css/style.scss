@@ -79,3 +79,38 @@ blockquote {
   margin-right: 0px;
   // margin-left: 0px;
 }
+
+#defbox {
+  background-color: rgba(0,0,0,0);
+  max-width: 500px;
+  height: 180px;
+  opacity: 0;
+  position: absolute;
+  display: none;
+  transition: opacity 400ms;
+  transition-delay: .5s;
+}
+
+#defbox:hover {
+  opacity: 1;
+}
+
+#defbox-text {
+  background-color: rgba(0,0,0,.8);
+  max-height: 150px;
+  min-height: 150px;
+
+  width: 200px;
+
+  color: white;
+  bottom: 30px;
+  border-radius: 10px;
+  word-wrap: normal;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.glosstag {
+  color: rgba(145, 35, 66, .9);
+  font-weight: bold;
+}

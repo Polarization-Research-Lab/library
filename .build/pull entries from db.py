@@ -7,8 +7,10 @@ import sys, os, datetime
 from pandas.core.arrays.period import period_asfreq_arr
 
 # Internal Dependencies
+import glossify
 sys.path.append('../../../.utils/')
 import alcdb
+
 
 # External Dependencies
 import pandas as pd 
@@ -190,8 +192,13 @@ for i in entries.index:
         tag_list = [tag.replace(' ','-') for tag in entry['Tags'].split(', ')],
         **entry
     )
+
     with open(f'../_posts/{entry["Date Published"].date()}-{entry["id"]}.md', 'w') as file:
-        file.write(post)
+        file.write(
+            glossify.glossify(
+                post
+            )
+        )
 
 # ... and we're done
 

@@ -9,14 +9,19 @@ tail_includes:
   - comments
 ---
 
+
+<div id='defbox'><div id='defbox-text'></div></div>
+
 <h1 data-toc-skip>{{ page.title }}</h1>
 
 <h2>{{ page.author }}</h2>
 {% if page.journal_link %}<p>In <a href = "{{ page.journal_link }}" target="_blank"><em>{{ page.journal }}</em></a></p>{% else %}<p>In <em>{{ page.journal }}</em></p>{% endif %}
 
+
 <p>Published: {{ page.publication_date }}</p>
 
 {% if page.author_link %}<p><a href = "{{ page.author_link }}" target="_blank">Author's Link to Article</a></p>{% endif %}
+
 
 <div class="post-meta text-muted">
 
@@ -134,3 +139,5 @@ tail_includes:
   </div><!-- .post-tail-bottom -->
 
 </div><!-- div.post-tail-wrapper -->
+
+<script src="/library/assets/js/glossify.js"></script>

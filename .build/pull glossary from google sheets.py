@@ -16,3 +16,4 @@ data = google_sheet_pull.pull(
 data = data.sort_values('term')
 data = data.set_index('term')
 data['definition'].to_json('../_data/glossary.json')
+data['definition'].to_json('../assets/glossary.json')
