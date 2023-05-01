@@ -8,7 +8,7 @@ from pandas.core.arrays.period import period_asfreq_arr
 
 # Internal Dependencies
 import glossify
-sys.path.append('../../../.utils/')
+sys.path.append('../../.utils/')
 import alcdb
 
 
@@ -83,7 +83,7 @@ open_data: {open_data}
 """
 
 # Pull Entries in Table (we could in the future just get this straight from google sheets; but right now it goes from sheets to the RDS table to here)
-db = alcdb.DB(config = '../../../.secrets/db.ini')
+db = alcdb.DB(config = '../../.secrets/db.ini')
 Library = db.tables['library']
 with db.Session() as session:
     entries = pd.read_sql(

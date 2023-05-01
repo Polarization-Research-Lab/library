@@ -1,6 +1,6 @@
 # Python Standard Lib
 import os, sys
-sys.path.append('../../../.utils/')
+sys.path.append('../../.utils/')
 
 import google_sheet_pull, alcdb
 
@@ -11,7 +11,7 @@ spreadsheet_name_and_range = 'Sheet1!A1:ZZ'
 data = google_sheet_pull.pull(
     spreadsheet_id,
     spreadsheet_name_and_range,
-    '../../../.secrets/google sheets token.json', # <-- token file path
+    '../../.secrets/google sheets token.json', # <-- token file path
 )
 data = data.sort_values('term')
 data = data.set_index('term')

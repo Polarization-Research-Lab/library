@@ -1,6 +1,6 @@
 # Python Standard Lib
 import os, sys
-sys.path.append('../../../.utils/')
+sys.path.append('../../.utils/')
 
 import google_sheet_pull, alcdb
 
@@ -11,10 +11,10 @@ spreadsheet_name_and_range = 'Form Responses 1!A1:ZZ'
 data = google_sheet_pull.pull(
     spreadsheet_id,
     spreadsheet_name_and_range,
-    '../../../.secrets/google sheets token.json', # <-- token file path
+    '../../.secrets/google sheets token.json', # <-- token file path
 )
 
-db = alcdb.DB(config = '../../../.secrets/db.ini')
+db = alcdb.DB(config = '../../.secrets/db.ini')
 Library = db.tables['library']
 
 from sqlalchemy import insert, update
