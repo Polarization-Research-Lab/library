@@ -23,4 +23,5 @@ assets/js/dist
 
 # User Added (us, the PRL)
 .DS_Store
+__pycache__/
 _/
