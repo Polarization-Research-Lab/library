@@ -1,0 +1,90 @@
+---
+title: "Racial Identity, Group Consciousness, and Attitudes: A Framework for Assessing Multiracial Self-Classification"
+author: Lauren D. Davenport, Shanto Iyengar, Sean J. Westwood
+date: 2021-10-29 00:00:00
+publication_date: Oct 29, 2021
+categories: ["2021"]
+tags: [['US', 'Quantitative', 'Descriptive']]
+curator: Chris Flores
+journal: American Journal of Political Science
+journal_link: https://onlinelibrary.wiley.com/doi/full/10.1111/ajps.12674
+pre_reg: ❌
+open_data: ✅
+---
+
+## Article Summary
+
+Multiracial Americans are one of the fastest growing racial groups, but a limited body of work has examined their racial attitudes. Davenport, Iyengar, and Westwood (2022) seek to understand the beliefs and feelings multiracial Americans hold toward different racial groups. They ask: do Black-White and Asian-White multiracials have racial attitudes that are more similar to those held by White people, by Asian or Black people, or neither? 
+
+We might suspect any of these three possibilities to hold true. First, part-White multiracials may feel closest to White people (the dominant racial group) as a way to elevate their position in the racial hierarchy. The authors call this the hegemonic model – multiracial people may attempt to pass into the higher status group and adopt their attitudes. Second, because Black-White and Asian-White people have historically been classified as only Black or Asian (a practice known as hypodescent), they may behave similarly to Black and Asian people. This is the minority solidarity model, which suggests that multiracials fill a key psychological need by expressing greater closeness to their nonwhite race. Finally, research indicates that multiracial people increasingly reject notions of hypodescent, so their attitudes might lie in between that of White people and their minority race. The authors call this the emerging identity model, in which multiracials form a new, distinctive group separate from their white and nonwhite races.
+
+The authors test these hypotheses with a survey including over 1,200 Black-White and Asian-White adults. These are respondents who mark that they are both Black and White or Asian and White on a survey. They compare the attitudes of these multiracial respondents to that of monoracial respondents – those who mark that they are only White, Black, or Asian – along several dimensions. They examine how close they feel toward different racial groups, the racial stereotypes they hold, and their implicit (automatic or subconscious) feelings toward different groups.
+
+Overall, they find no support for the hegemonic model. Compared to monoracial White people, Black-White and Asian-White people feel closer to and have more positive feelings toward Black and Asian people. Instead, they find support for both the minority solidarity and emerging identity models. On some questions, multiracials behave very similar to nonwhite monoracials. For example, multiracials hold similarly positive stereotypes of their minority race. On other questions, their attitudes differ from both White and Nonwhite monoracials; multiracials attach more importance to their racial identities than White people do but less importance than Black or Asian people do. There are also some important differences between Black-White and Asian-White respondents. While Black-White respondents hold implicit attitudes between that of White and Black respondents, Asian-White respondents hold implicit attitudes that are indistinguishable from that of Asian respondents. However, Asian-White respondents hold more racially conservative views than Black-White respondents and feel a greater sense of linked fate with White people.
+
+Their findings suggest that multiracials will align themselves more with the more Democratic partisanship of racial minorities. However, questions remain about the boundaries of whiteness in the future. Given the limited body of research on multiracials, future work might examine variation in appearance among multiracial individuals or study multiracial groups other than Black-Whites and Asian-Whites.
+
+
+## Methods and Analysis
+
+> **Was the study and its analyses pre-registered?**: No
+> 
+{: .prompt-danger}
+
+> **Did the study rely on proxy variables to measure polarization?**: N/A
+> 
+{: .prompt-tip}
+
+
+> **Were standard p-value thresholds used (p<.05 or 95% Confidence Intervals that don’t overlap zero)?**: Yes
+>
+> - Largest p-value presented as significant: 0.05
+{: .prompt-tip}
+
+> **Were correlational results interpreted with causal language?**: No
+> 
+{: .prompt-tip}
+
+## Limitations / Weaknesses
+
+This paper is persuasive and well written with clearly testable hypotheses, but there are a few limitations. First, some of Lauren Davenport’s other research shows that nontrivial shares of individuals with biracial parentage identify as singularly one race. It is possible that there are such biracial individuals in the monoracial samples. As they note in the supplemental information, this might overestimate support for the emerging identity model and underestimate support for the minority solidarity model if such individuals behave more similarly to monoracial Asian and Black people. Second, the authors mention the two axes of subordination model proposed by Zou and Cheryan (2017) but only examine stereotypes along the competence / superiority dimension. It would have been good to see the other dimension – cultural foreignness –  particularly for Asian and Asian-White respondents. Third, the OLS models do not account for party identification. <span class="glosstag" data-key="Party ID">Party ID</span> could be a potential confounder if multiracials differ significantly in party identity from monoracials and if party identity predicts racial attitudes, though there is the possibility for posttreatment bias if <span class="glosstag" data-key="Party ID">party ID</span> is a downstream consequence of racial identification.
+
+## Open Data & Analyses
+
+> **Does the article make the replication data publicly available?**: Yes
+> 
+{: .prompt-tip}
+
+> **Does the article make the replication analysis scripts publicly available?**: Yes
+> 
+{: .prompt-tip}
+
+
+[Link to replication data.](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HFXXEF){:target='_blank'}
+
+## Article Citation
+
+Davenport, L. D., Iyengar, S., & Westwood, S. J. (2022). Racial Identity, Group Consciousness, and Attitudes: A Framework for Assessing Multiracial Self?Classification. American Journal of Political Science, 66(3), 570–586. https://doi.org/10.1111/ajps.12674
+
+### Bibtex
+
+```bibtex
+@article{davenport_racial_2022,
+	title = {Racial {Identity}, {Group} {Consciousness}, and {Attitudes}: {A} {Framework} for {Assessing} {Multiracial} {Self}?{Classification}},
+	volume = {66},
+	issn = {0092-5853, 1540-5907},
+	shorttitle = {Racial {Identity}, {Group} {Consciousness}, and {Attitudes}},
+	url = {https://onlinelibrary.wiley.com/doi/10.1111/ajps.12674},
+	doi = {10.1111/ajps.12674},
+	language = {en},
+	number = {3},
+	urldate = {2023-03-17},
+	journal = {American Journal of Political Science},
+	author = {Davenport, Lauren D. and Iyengar, Shanto and Westwood, Sean J.},
+	month = jul,
+	year = {2022},
+	pages = {570--586},
+}
+
+```
+
