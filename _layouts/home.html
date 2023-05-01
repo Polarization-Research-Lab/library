@@ -60,6 +60,9 @@ layout: page
         <td><a class = "aa" href="{{ post.url | relative_url }}" style="text-align: center;">{{ post.open_data }}</a></td>
       </tr>
 
+      <script>
+        console.log('{{ post }}', '{{ post.title }}', '{{ post.tags }}', '{{ post.url }}', '{{ post | relative_url }}')
+      </script>
 
 
 
