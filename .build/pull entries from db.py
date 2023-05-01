@@ -193,7 +193,7 @@ for i in entries.index:
         **entry
     )
 
-    with open(f'../_posts/{entry["Date Published"].date()}-{entry["title"]}.md', 'w') as file:
+    with open(f'../_posts/{entry["Date Published"].date()}-{entry["Article Title"]}.md', 'w') as file:
         file.write(
             glossify.glossify(
                 post
