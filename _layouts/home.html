@@ -45,7 +45,8 @@ layout: page
   <table>
     <tr> 
       <th>Title</th>
-      <th>Article Publication Date</th>
+      <th>Author(s)</th>
+      <th>Published</th>
       <th>Tags</th>
       <th>Pre-<br>registered</th>
       <th>Open Data</th>
@@ -54,7 +55,8 @@ layout: page
 
     {% for post in posts %}
       <tr class = 'tr_'>
-        <td><a class = "aa" href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+        <td><a class = "aa" href="{{ post.url | relative_url }}">{{ post.title | truncate: 200 }}</a></td>
+        <td><a class = "aa" href="{{ post.url | relative_url }}">{{ post.author | truncate: 200 }}</a></td>
         <td><a class = "aa" href="{{ post.url | relative_url }}">{% include datetime.html date=post.date %}</a></td>
         <td><a class = "aa" href="{{ post.url | relative_url }}" style="width: 200px;">{% for tag in post.tags %}{{ tag }} {% endfor %}</a></td>
         <td><a class = "aa" href="{{ post.url | relative_url }}" style="text-align: center;">{{ post.pre_reg }}</a></td>
