@@ -19,7 +19,6 @@ body {
 }
 
 table {
-  width: 100%
 }
 
 tr {
@@ -47,6 +46,7 @@ td a {
 a:hover {
   color: var(--post-list-text-color);
 }
+
 
 
 /* --- add some top spacing to the top-bar; looks a little nicer when we embed in wordpress --- */
@@ -118,3 +118,22 @@ blockquote {
   color: rgba(145, 35, 66, .9);
   font-weight: bold;
 }
+
+
+
+
+/* it will be created by Liquid */
+.table-wrapper-custom {
+  table-layout: auto;
+  width: auto;
+
+  td, th {
+    padding: 20px; 
+  }
+}
+
+.td-no-wrap {
+  white-space:nowrap;
+}
+
+
