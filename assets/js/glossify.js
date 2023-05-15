@@ -14,7 +14,9 @@ fetch('/library//assets/glossary.json')
                 defbox.style.top = (this.offsetTop - 220) + 'px'
                 defbox.style.left = (this.offsetLeft - 20) + 'px'
                 
-                document.getElementById('defbox-text').innerHTML = '<p><u><b>' + this.dataset.key + '</u></b></p>' + glossary[this.dataset.key]
+                document.getElementById('defbox-text').innerHTML = '<p><u><b>' + this.dataset.key + '</u></b></p>' + glossary[this.dataset.key].definition
+                console.log(this.dataset.key)
+                console.log(glossary[this.dataset.key])
             }
         }
     }

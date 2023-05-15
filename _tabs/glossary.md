@@ -9,7 +9,7 @@ order: 7
 
 ## {{ entry[0] }}
 
-{{ entry[1] }}
+{{ entry[1].definition }}
 
 {% endfor %}
 

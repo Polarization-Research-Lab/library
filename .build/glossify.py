@@ -15,12 +15,13 @@ def glossify(post):
 
     # iterate through glossary words and replace with special html
     for word in glossary:
-        pattern = rf'(\b{word}\b)' # <-- get all occurances of {word} that are _not_ inside html blocks
-        posttext = re.sub(
-            pattern,                    
-            glosstag.format(key = word),
-            posttext,
-            flags = re.IGNORECASE,
-        )
+        for trigger in glossary[word]['triggers']:
+            pattern = rf'(\b{trigger}\b)' # <-- get all occurances of {word} that are _not_ inside html blocks
+            posttext = re.sub(
+                pattern,                    
+                glosstag.format(key = word),
+                posttext,
+                flags = re.IGNORECASE,
+            )
 
     return head + posttext + footer
