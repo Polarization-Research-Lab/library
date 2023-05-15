@@ -14,7 +14,7 @@ As an author, we ask that you use our specified style and format (see `FORMAT` t
 
 ### How to apply
 
-Find a set of five articles you would be willing to review (you can pick from this list or suggest one using the article criteria below).  We will pick one of your suggestions or work with you to identify an article from our list.
+Find a set of five articles you would be willing to review (you can pick from [this list](https://docs.google.com/spreadsheets/d/1RQAmTyc0V0hPYzaBMpP6AOLvPFZJ6OFrNDtiih7Of8k/edit#gid=0)).  We will pick one of your suggestions or work with you to identify an article from our list.
 
 Submit an application to be a writer [at this link](https://docs.google.com/forms/d/e/1FAIpQLSdXt-JjOV2ZbuXFHbX7quSOdf-ofJsFu4FRfE1TeCkCb2E9fQ/viewform).
 
