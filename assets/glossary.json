@@ -56,8 +56,7 @@
     "Partisan":{
         "definition":"Identifying with a political party. Often broken down by strength of partisanship (e.g.,  strong Republican, somewhat strong Republican) ",
         "triggers":[
-            "Partisan",
-            "pid"
+            "Partisan"
         ]
     },
     "ANES":{
