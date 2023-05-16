@@ -2,15 +2,13 @@
     "Partisan Animosity":{
         "definition":"We use the term \u201cpartisan animosity\u201d to capture the related concepts of affective polarization, decreasing social trust, and increasing tolerance of behavior that violates democratic norms, including support of political violence. While Americans arguably are no more ideologically polarized than in the recent past, they hold more negative views toward the political opposition (out party) and more positive views toward members of their own party (in party), which is affective polarization. In the US, partisanship means identifying with the Democrat group or Republican group. Partisan animosity has increased significantly over the last 30 years. This pattern of in-party favoritism has been documented across several measures (for example, affect, social distance, and interpersonal trust), raising alarm among scholars about the potential implications of the growing discord. Recently, it has become clear that this degree of commitment to a political party has implications for the acquisition and spread of misinformation, and for willingness to engage in violent protest.",
         "triggers":[
-            "Partisan Animosity",
-            "animosity"
+            "Partisan Animosity"
         ]
     },
     "Affective Polarization":{
         "definition":"Affective polarization is calculated by subtracting feeling toward the out-party from feeling toward the in-party. Feelings toward both parties are typically measured on a 100-point feeling thermometer scale. For example, if someone who identifies as a Democrat marks their feeling toward Democrats as an 80 out of 100 on the feeling thermometer and their feeling toward Republicans as a 20, then affective polarization would be 60.",
         "triggers":[
-            "Affective Polarization",
-            "polarization"
+            "Affective Polarization"
         ]
     },
     "Democratic Norms":{
