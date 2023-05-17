@@ -137,3 +137,16 @@ blockquote {
 }
 
 
+
+// remove the dot because it was causing formatting issues
+#archives {
+
+  .year {
+
+    /* Year dot */
+    &::after {
+      content: '';
+      display: none;
+    }
+  }
+}
