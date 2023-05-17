@@ -25,15 +25,8 @@ tail_includes:
 
 <div class="post-meta text-muted">
 
-    <!-- published date -->
-    <span>
-      {{ site.data.locales[site.lang].post.posted }}
-      {% include datetime.html date=page.date tooltip=true %}
-    </span>
-
     <!-- lastmod date -->
     {% if page.last_modified_at %}
-    |
     <span>
       {{ site.data.locales[site.lang].post.updated }}
       {% include datetime.html date=page.last_modified_at tooltip=true %}
