@@ -17,12 +17,12 @@ import pandas as pd
 
 
 # Template for a Summary Post
+# categories: ["{Year}"] <-- this was in the yaml headings
 post_template = """---
 title: "{Article Title}"
 author: {Article Author(s)}
 date: {Date Published}
 publication_date: {Date Published Formatted}
-categories: ["{Year}"]
 tags: [{tag_list}]
 curator: {Your Name}
 journal: {Journal}{journal_link}{author_link}
