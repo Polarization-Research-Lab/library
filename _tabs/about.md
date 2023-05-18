@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 2
 ---
 
 The Library of Partisan Animosity is a free resource for learning about partisan animosity for scholars, educators, students and practitioners. The library covers the top articles about polarization from 2000-present with a focus on the United States and future expansion to other countries.

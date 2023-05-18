@@ -115,7 +115,7 @@ blockquote {
 }
 
 .glosstag {
-  color: rgba(145, 35, 66, .9);
+  color: rgba(110, 16, 43, .8);
   font-weight: bold;
 }
 
@@ -137,3 +137,16 @@ blockquote {
 }
 
 
+
+// remove the dot because it was causing formatting issues
+#archives {
+
+  .year {
+
+    /* Year dot */
+    &::after {
+      content: '';
+      display: none;
+    }
+  }
+}
