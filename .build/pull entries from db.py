@@ -46,7 +46,7 @@ open_data: {open_data}
 
 
 > **Were standard p-value thresholds used (p<.05 or 95% Confidence Intervals that don’t overlap zero)?**: {Inference Metrics}
->
+> 
 > - Largest p-value presented as significant: {Largest p-value presented as significant}
 {conditional_pvals}
 
@@ -166,13 +166,13 @@ for i in entries.index:
     else:
         conditional_causal += '{: .prompt-tip}'
 
-    conditional_proxies = ''
+    conditional_proxies = '> \n> ' + entry['Polarization Proxies - Explanation']
     if entry['Polarization Proxies'] == 'Yes':
-        conditional_proxies += '\n> \n>'
-        conditional_proxies += entry['Polarization Proxies - Explanation']
-        conditional_proxies += '{: .prompt-danger}'
+        # print(entry['Polarization Proxies - Explanation'])
+        # conditional_proxies += '> \n> '
+        conditional_proxies += '\n{: .prompt-danger}'
     else:
-        conditional_proxies += '{: .prompt-tip}'
+        conditional_proxies += '\n{: .prompt-tip}'
 
 
 
