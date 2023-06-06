@@ -1,21 +1,25 @@
 # Python Standard Lib
 import os, sys
-sys.path.append('../../.utils/')
 
-import google_sheet_pull, alcdb
+# Internal
+sys.path.append('../../utils/')
+import google_sheet_utils
+import distilldb as ddb
 
 
 spreadsheet_id = '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80'
-spreadsheet_name_and_range = 'Form Responses 1!A1:ZZ'
 
-data = google_sheet_pull.pull(
-    spreadsheet_id,
-    spreadsheet_name_and_range,
-    '../../.secrets/google sheets token.json', # <-- token file path
+
+data = google_sheet_utils.pull(
+    '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80', # <-- name
+    'Form Responses 1', # <-- sheet
+    'A1:ZZ', # <-- range
+    '../../../.secrets/google sheets credentials.json', # <-- credentials file path
+    '../../../.secrets/google sheets token.json', # <-- token file path
 )
 
-db = alcdb.DB(config = '../../.secrets/db.ini')
-Library = db.tables['library']
+db = ddb.Database(config = '../../../.secrets/db.json')
+Library = db['library']
 
 from sqlalchemy import insert, update
 with db.Session() as session:
