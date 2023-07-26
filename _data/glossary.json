@@ -71,5 +71,11 @@
             "Metaperception",
             "metaperceptions"
         ]
+    },
+    "Difference-in-difference":{
+        "definition":"The difference-in-difference method captures the significant differences in outcomes across treatment and control groups, which occur between pre-treatment and post-treatment periods. In the simplest quasi-experiment, an outcome variable is observed for one group before and after it is exposed to a treatment. The same outcome is observed for a second group (control group) that is not exposed to the treatment. The change in the outcome variable in the treatment group compared to the change in the outcome in the control group gives a measure for the treatment effect.",
+        "triggers":[
+            "Difference-in-difference"
+        ]
     }
 }
