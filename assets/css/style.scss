@@ -16,6 +16,20 @@ $tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
 
 body {
   font-family: helvetica;
+  font-size: 10pt !important;
+}
+
+.core-wrapper{
+  width:800px !important;
+  padding:0px !important;
+}
+
+#panel-wrapper{
+  display:none !important;
+}
+
+#post-list{
+  margin-top:0px !important;
 }
 
 table {
@@ -33,13 +47,13 @@ th {
    color: var(--post-list-text-color);
    font-weight: bold;
    // text-align: center;
-   padding: 16px; 
+   padding: 5px; 
 }
 
 td a { 
    display: block; 
    // border: 1px solid black;
-   padding: 16px; 
+   padding: 5px; 
    color: var(--post-list-text-color);
 }
 
