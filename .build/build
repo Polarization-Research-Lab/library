@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# # Setup
+# ## CD into the directory that this script is in
+cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/"
+
+# ## Get common environment variables
+source ../../.env
+
+# ## Redirect stdout and stderr
+exec &>> ".log"
+
+# Execute
+# ## Add Timestamp
+echo "--- START: [$(date '+%Y-%m-%d %H:%M:%S')] $1 ---"
+
+# ## Run
+$py3 pipeline.py
+
+git add --all
+git commit -m 'routine update'
+git push origin master
+
+# ## Add Timestamp
+echo "--- FIN: [$(date '+%Y-%m-%d %H:%M:%S')] $1 ---"
+
+echo "============"

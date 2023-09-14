@@ -1,0 +1,8 @@
+--- START: [2023-09-14 15:47:40]  ---
+Traceback (most recent call last):
+  File "pipeline.py", line 1, in <module>
+    with open('push from google sheets to db.py', 'r') as file: exec(file.read())
+  File "<string>", line 6, in <module>
+  File "/code/code/library/.build/../../utils/google_sheet_utils.py", line 2, in <module>
+    from google.auth.transport.requests import Request
+ModuleNotFoundError: No module named 'google'
