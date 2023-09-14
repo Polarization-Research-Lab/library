@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # # Setup
 # ## CD into the directory that this script is in
@@ -19,7 +20,7 @@ $py3 pipeline.py
 
 git add --all
 git commit -m 'routine update'
-git push origin master
+git push origin main
 
 # ## Add Timestamp
 echo "--- FIN: [$(date '+%Y-%m-%d %H:%M:%S')] $1 ---"

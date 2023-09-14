@@ -6,3 +6,28 @@ Traceback (most recent call last):
   File "/code/code/library/.build/../../utils/google_sheet_utils.py", line 2, in <module>
     from google.auth.transport.requests import Request
 ModuleNotFoundError: No module named 'google'
+[main f773406] routine update
+ 2 files changed, 35 insertions(+)
+ create mode 100644 .build/.log
+ create mode 100755 .build/build
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Polarization-Research-Lab/library.git'
+--- FIN: [2023-09-14 15:47:40]  ---
+============
+--- START: [2023-09-14 15:52:13]  ---
+Traceback (most recent call last):
+  File "pipeline.py", line 1, in <module>
+    with open('push from google sheets to db.py', 'r') as file: exec(file.read())
+  File "<string>", line 6, in <module>
+  File "/code/code/library/.build/../../utils/google_sheet_utils.py", line 2, in <module>
+    from google.auth.transport.requests import Request
+ModuleNotFoundError: No module named 'google'
+--- START: [2023-09-14 15:52:47]  ---
+Traceback (most recent call last):
+  File "pipeline.py", line 1, in <module>
+    with open('push from google sheets to db.py', 'r') as file: exec(file.read())
+  File "<string>", line 6, in <module>
+  File "/code/code/library/.build/../../utils/google_sheet_utils.py", line 2, in <module>
+    from google.auth.transport.requests import Request
+ModuleNotFoundError: No module named 'google'
+--- START: [2023-09-14 15:54:23]  ---
