@@ -31,3 +31,81 @@ Traceback (most recent call last):
     from google.auth.transport.requests import Request
 ModuleNotFoundError: No module named 'google'
 --- START: [2023-09-14 15:54:23]  ---
+[main 5ae4806] routine update
+ 5 files changed, 362 insertions(+), 1 deletion(-)
+ create mode 100644 _posts/2014-09-09-26.md
+ create mode 100644 _posts/2020-08-14-28.md
+ create mode 100644 _posts/2022-06-01-27.md
+To https://github.com/Polarization-Research-Lab/library.git
+   26891b2..5ae4806  main -> main
+--- FIN: [2023-09-14 15:54:27]  ---
+============
+--- START: [2023-09-15 00:00:02]  ---
+Traceback (most recent call last):
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.8/socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connection.py", line 363, in connect
+    self.sock = conn = self._new_conn()
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f6b39b0d610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6b39b0d610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/auth/transport/requests.py", line 186, in __call__
+    response = self.session.request(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6b39b0d610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "pipeline.py", line 1, in <module>
+    with open('push from google sheets to db.py', 'r') as file: exec(file.read())
+  File "<string>", line 13, in <module>
+  File "/code/code/library/.build/../../utils/google_sheet_utils.py", line 17, in pull
+    creds.refresh(Request())
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/oauth2/credentials.py", line 344, in refresh
+    ) = reauth.refresh_grant(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/oauth2/reauth.py", line 332, in refresh_grant
+    response_status_ok, response_data, retryable_error = _client._token_endpoint_request_no_throw(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/oauth2/_client.py", line 215, in _token_endpoint_request_no_throw
+    request_succeeded, response_data, retryable_error = _perform_request()
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/oauth2/_client.py", line 191, in _perform_request
+    response = request(
+  File "/code/code/.envs/py3/lib/python3.8/site-packages/google/auth/transport/requests.py", line 192, in __call__
+    raise new_exc from caught_exc
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6b39b0d610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+--- START: [2023-09-16 00:00:01]  ---
