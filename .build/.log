@@ -109,3 +109,7 @@ Traceback (most recent call last):
     raise new_exc from caught_exc
 google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f6b39b0d610>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
 --- START: [2023-09-16 00:00:01]  ---
+[main 9082767] routine update
+ 1 file changed, 78 insertions(+)
+fatal: could not read Username for 'https://github.com': No such device or address
+--- START: [2023-09-17 00:00:01]  ---
