@@ -2,7 +2,7 @@
 import os, sys
 
 # Internal
-sys.path.append('../../utils/')
+sys.path.append('../../../utils/')
 import google_sheet_utils
 import distilldb as ddb
 
@@ -14,11 +14,11 @@ data = google_sheet_utils.pull(
     '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80', # <-- name
     'Form Responses 1', # <-- sheet
     'A1:ZZ', # <-- range
-    '../../../.secrets/google sheets credentials.json', # <-- credentials file path
-    '../../../.secrets/google sheets token.json', # <-- token file path
+    '../../../../.secrets/google sheets credentials.json', # <-- credentials file path
+    '../../../../.secrets/google sheets token.json', # <-- token file path
 )
 
-db = ddb.Database(config = '../../../.secrets/db.json')
+db = ddb.Database(config = '../../../../.secrets/db.json')
 Library = db['library']
 
 from sqlalchemy import insert, update
