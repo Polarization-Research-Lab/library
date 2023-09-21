@@ -20,7 +20,6 @@ data = google_sheet_utils.pull(
 
 db = ddb.Database(config = '../../../../.secrets/db.json')
 Library = db['library']
-
 from sqlalchemy import insert, update
 with db.Session() as session:
 
