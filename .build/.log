@@ -135,3 +135,35 @@ To https://github.com/Polarization-Research-Lab/library.git
  create mode 100644 _posts/2021-07-01-29.md
  create mode 100644 assets/img/Armaly-Enders-2021_Holliday.png
 fatal: could not read Username for 'https://github.com': No such device or address
+--- START: [2023-09-21 13:42:41]  ---
+Traceback (most recent call last):
+  File "pipeline.py", line 1, in <module>
+    with open('push from google sheets to db.py', 'r') as file: exec(file.read())
+  File "<string>", line 35, in <module>
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2262, in execute
+    return self._execute_internal(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2153, in _execute_internal
+    result = conn.execute(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1412, in execute
+    return meth(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1627, in _execute_clauseelement
+    compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 703, in _compile_w_cache
+    compiled_sql = self._compiler(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 315, in _compiler
+    return dialect.statement_compiler(dialect, self, **kw)
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/compiler.py", line 1426, in __init__
+    Compiled.__init__(self, dialect, statement, **kwargs)
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/compiler.py", line 867, in __init__
+    self.string = self.process(self.statement, **compile_kwargs)
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/compiler.py", line 912, in process
+    return obj._compiler_dispatch(self, **kwargs)
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/visitors.py", line 143, in _compiler_dispatch
+    return meth(self, **kw)  # type: ignore  # noqa: E501
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/compiler.py", line 6047, in visit_update
+    crud_params_struct = crud._get_crud_params(
+  File "/prl/code/.envs/py3/lib/python3.8/site-packages/sqlalchemy/sql/crud.py", line 335, in _get_crud_params
+    raise exc.CompileError(
+sqlalchemy.exc.CompileError: Unconsumed column names: Full citation (APA style), Date published , Bibtex entry , Your name , Article title , Article authors (in order) 
