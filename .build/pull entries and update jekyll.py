@@ -9,7 +9,8 @@ from pandas.core.arrays.period import period_asfreq_arr
 # Internal Dependencies
 import glossify
 sys.path.append('../../../utils/')
-import distilldb as ddb
+import google_sheet_utils
+# import distilldb as ddb
 
 
 # External Dependencies
@@ -17,82 +18,16 @@ import pandas as pd
 
 
 # Template for a Summary Post
-# categories: ["{Year}"] <-- this was in the yaml headings
-post_template = """---
-title: "{Article Title}"
-author: {Article Author(s)}
-date: {Date Published}
-publication_date: {Date Published Formatted}
-tags: [{tag_list}]
-curator: {Your Name}
-journal: {Journal}{journal_link}{author_link}
-pre_reg: {pre_reg}
-open_data: {open_data}
----
+with open('template.md', 'r') as template_file:
+    post_template = template_file.read()
 
-## Article Summary
-
-{Summary}
-
-## Methods and Analysis
-
-> **Was the study and its analyses pre-registered?**: {Preregistration}
-> 
-{conditional_prereg}
-
-> **Did the study rely on proxy variables to measure polarization?**: {Polarization Proxies}
-> 
-{conditional_proxies}
-
-
-> **Were standard p-value thresholds used (p<.05 or 95% Confidence Intervals that don’t overlap zero)?**: {Inference Metrics}
-> 
-> - Largest p-value presented as significant: {Largest p-value presented as significant}
-{conditional_pvals}
-
-> **Were correlational results interpreted with causal language?**: {Causal Claims from Correlational Data}
-> 
-{conditional_causal}
-
-## Limitations / Weaknesses
-
-{Limitations or Weaknesses}
-
-## Open Data & Analyses
-
-> **Does the article make the replication data publicly available?**: {Open Data}
-> 
-{conditional_opendata}
-
-> **Does the article make the replication analysis scripts publicly available?**: {Open Analyses}
-> 
-{conditional_analyses}
-
-{conditional_replication_link}
-
-## Article Citation
-
-{Full Citation (APA Style)}
-
-### Bibtex
-
-```bibtex
-{Bibtex Entry}
-```
-
-"""
-
-# Pull Entries in Table (we could in the future just get this straight from google sheets; but right now it goes from sheets to the RDS table to here)
-db = ddb.Database(config = '../../../../.secrets/db.json')
-Library = db['library']
-with db.Session() as session:
-    entries = pd.read_sql(
-        session.query(Library).statement,
-        db.engine,
-    )
-    # entries.to_csv('entries.csv') # <-- for local debugging
-
-# entries = pd.read_csv('entries.csv') # <-- for local debugging
+entries = google_sheet_utils.pull(
+    '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80', # <-- name
+    'Form Responses 1', # <-- sheet
+    'A1:ZZ', # <-- range
+    '../../../../.secrets/google sheets credentials.json', # <-- credentials file path
+    '../../../../.secrets/google sheets token.json', # <-- token file path
+)
 
 # generate markdown file in `_posts` folder for each entry
 for i in entries.index:
@@ -100,7 +35,7 @@ for i in entries.index:
     entry = entries.loc[i, :]
 
     # we want the date formated as: YYYY-MM-DD
-    date_formated = entry['Date Published'].split('/')
+    date_formated = entry['Date published'].split('/')
     date_formated = '-'.join([
         date_formated[2],
         date_formated[0],
@@ -109,11 +44,11 @@ for i in entries.index:
 
     # format entry
     entry = entry.to_dict()
-    entry['Your Name'] = entry['Your Name']
-    entry['Date Published'] = datetime.datetime.strptime(entry['Date Published'], '%m/%d/%Y')
-    entry['Date Published Formatted'] = entry['Date Published'].strftime('%b %d, %Y')
-    entry['Article Title'] = entry['Article Title'].replace('"', "'")
-    entry['Year'] = entry['Date Published'].strftime('%Y')
+    entry['Your name'] = entry['Your name']
+    entry['Date published'] = datetime.datetime.strptime(entry['Date published'], '%m/%d/%Y')
+    entry['Date Published Formatted'] = entry['Date published'].strftime('%b %d, %Y')
+    entry['Article title'] = entry['Article title'].replace('"', "'")
+    entry['Year'] = entry['Date published'].strftime('%Y')
 
 
     # setup to generate (all the conditional logic goes here)
@@ -193,7 +128,7 @@ for i in entries.index:
         **entry
     )
 
-    with open(f'../_posts/{entry["Date Published"].date()}-{entry["id"]}.md', 'w') as file:
+    with open(f'../_posts/{entry["Date published"].date()}-{entry["id"]}.md', 'w') as file:
         file.write(
             glossify.glossify(
                 post

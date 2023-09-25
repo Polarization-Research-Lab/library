@@ -12,6 +12,7 @@ data = google_sheet_utils.pull(
     '../../../../.secrets/google sheets credentials.json', # <-- credentials file path
     '../../../../.secrets/google sheets token.json', # <-- token file path
 )
+
 data.loc[data['triggers'].isna(), 'triggers'] = ''
 data['triggers'] = data.apply(lambda x: [x['term'], *[t for t in x['triggers'].split(',') if t != '']], axis = 1)
 

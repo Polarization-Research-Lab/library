@@ -9,7 +9,6 @@ import distilldb as ddb
 
 spreadsheet_id = '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80'
 
-
 data = google_sheet_utils.pull(
     '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80', # <-- name
     'Form Responses 1', # <-- sheet
