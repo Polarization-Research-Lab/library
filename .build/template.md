@@ -8,6 +8,7 @@ curator: {Your name}
 journal: {Journal}{journal_link}{author_link}
 pre_reg: {pre_reg}
 open_data: {open_data}
+review_article: {review_article}
 ---
 
 ## Article Summary

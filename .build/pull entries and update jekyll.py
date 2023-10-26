@@ -8,7 +8,7 @@ from pandas.core.arrays.period import period_asfreq_arr
 
 # Internal Dependencies
 import glossify
-sys.path.append('../../../utils/')
+sys.path.append('../../.utils/')
 import google_sheet_utils
 # import distilldb as ddb
 
@@ -25,115 +25,120 @@ entries = google_sheet_utils.pull(
     '12Kwt-LKjd-j1VZ7MA6lvT_uqwE88v7iTvTWCWktEL80', # <-- name
     'Form Responses 1', # <-- sheet
     'A1:ZZ', # <-- range
-    '../../../../.secrets/google sheets credentials.json', # <-- credentials file path
-    '../../../../.secrets/google sheets token.json', # <-- token file path
+    '../../../.secrets/google sheets credentials.json', # <-- credentials file path
+    '../../../.secrets/google sheets token.json', # <-- token file path
 )
 
 # generate markdown file in `_posts` folder for each entry
 for i in entries.index:
-
     entry = entries.loc[i, :]
+    if entry['Accepted'] == 'Yes':
 
-    # we want the date formated as: YYYY-MM-DD
-    date_formated = entry['Date published'].split('/')
-    date_formated = '-'.join([
-        date_formated[2],
-        date_formated[0],
-        date_formated[1],
-    ])
+        # we want the date formated as: YYYY-MM-DD
+        date_formated = entry['Date published'].split('/')
+        date_formated = '-'.join([
+            date_formated[2],
+            date_formated[0],
+            date_formated[1],
+        ])
 
-    # format entry
-    entry = entry.to_dict()
-    entry['Your name'] = entry['Your name']
-    entry['Date published'] = datetime.datetime.strptime(entry['Date published'], '%m/%d/%Y')
-    entry['Date Published Formatted'] = entry['Date published'].strftime('%b %d, %Y')
-    entry['Article title'] = entry['Article title'].replace('"', "'")
-    entry['Year'] = entry['Date published'].strftime('%Y')
+        # format entry
+        entry = entry.to_dict()
+        entry['Your name'] = entry['Your name']
+        entry['Date published'] = datetime.datetime.strptime(entry['Date published'], '%m/%d/%Y')
+        entry['Date Published Formatted'] = entry['Date published'].strftime('%b %d, %Y')
+        entry['Article title'] = entry['Article title'].replace('"', "'")
+        entry['Year'] = entry['Date published'].strftime('%Y')
 
+        is_review = True if entry['Is this a review article?'] == "Yes" else False
 
-    # setup to generate (all the conditional logic goes here)
-    journal_link = ''
-    if entry["Journal's Link to Article"] != '':
-        journal_link = '\njournal_link: ' + entry["Journal's Link to Article"]
+        # setup to generate (all the conditional logic goes here)
+        journal_link = ''
+        if entry["Journal's Link to Article"] != '':
+            journal_link = '\njournal_link: ' + entry["Journal's Link to Article"]
 
-    author_link = ''
-    if entry["Author's Link to Article"] != '':
-        author_link = '\nauthor_link: ' + entry["Author's Link to Article"]
+        author_link = ''
+        if entry["Author's Link to Article"] != '':
+            author_link = '\nauthor_link: ' + entry["Author's Link to Article"]
 
-    pre_reg = '✅'
-    conditional_prereg = '{: .prompt-tip}'
-    if entry['Preregistration'] == 'No':
-        pre_reg = '❌'
-        conditional_prereg = '{: .prompt-danger}'
-    elif entry['Preregistration'] == 'Study was conducted before 2015':
-        pre_reg = '⚠️'
-        conditional_prereg = '{: .prompt-warning}'
+        pre_reg = '✅'
+        conditional_prereg = '{: .prompt-tip}'
+        if entry['Preregistration'] == 'No':
+            pre_reg = '❌'
+            conditional_prereg = '{: .prompt-danger}'
+        elif entry['Preregistration'] == 'Study was conducted before 2015':
+            pre_reg = '⚠️'
+            conditional_prereg = '{: .prompt-warning}'
 
-    open_data = '✅'
-    conditional_opendata = '{: .prompt-tip}'
-    if entry['Open Data'] == 'No':
-        open_data = '❌'
-        conditional_opendata = '{: .prompt-danger}'
-    else:
+        open_data = '✅'
         conditional_opendata = '{: .prompt-tip}'
+        if entry['Open Data'] == 'No':
+            open_data = '❌'
+            conditional_opendata = '{: .prompt-danger}'
+        else:
+            conditional_opendata = '{: .prompt-tip}'
 
-    conditional_analyses = '{: .prompt-tip}'
-    if entry['Open Analyses'] == 'No':
-        conditional_analyses = '{: .prompt-danger}'
-    else:
         conditional_analyses = '{: .prompt-tip}'
+        if entry['Open Analyses'] == 'No':
+            conditional_analyses = '{: .prompt-danger}'
+        else:
+            conditional_analyses = '{: .prompt-tip}'
 
 
-    conditional_replication_link = ''
-    if entry['Replication'] != '':
-        conditional_replication_link = "\n[Link to replication data.]({Replication}){{:target='_blank'}}".format(Replication = entry['Replication'])
+        conditional_replication_link = ''
+        if entry['Replication'] != '':
+            conditional_replication_link = "\n[Link to replication data.]({Replication}){{:target='_blank'}}".format(Replication = entry['Replication'])
 
-    conditional_pvals = '{: .prompt-tip}'
-    if entry['Inference Metrics'] == 'No':
-        conditional_pvals ='{: .prompt-danger}'
+        conditional_pvals = '{: .prompt-tip}'
+        if entry['Inference Metrics'] == 'No':
+            conditional_pvals ='{: .prompt-danger}'
 
-    conditional_causal = ''
-    if entry['Causal Claims from Correlational Data'] == 'Yes':
-        conditional_causal += '>\n> '
-        conditional_causal += entry['Causal Claims from Correlational Data - Explanation']
-        conditional_causal += '\n'
-        conditional_causal += '{: .prompt-danger}'
-    else:
-        conditional_causal += '{: .prompt-tip}'
+        conditional_causal = ''
+        if entry['Causal Claims from Correlational Data'] == 'Yes':
+            conditional_causal = f">\n> \n{entry['Causal Claims from Correlational Data - Explanation']}\n{{: .prompt-danger}}"
+        else:
+            conditional_causal = '{: .prompt-tip}'
 
-    conditional_proxies = '> \n> ' + entry['Polarization Proxies - Explanation']
-    if entry['Polarization Proxies'] == 'Yes':
-        # print(entry['Polarization Proxies - Explanation'])
-        # conditional_proxies += '> \n> '
-        conditional_proxies += '\n{: .prompt-danger}'
-    else:
-        conditional_proxies += '\n{: .prompt-tip}'
+        conditional_proxies = ''
+        if entry['Polarization Proxies'] == 'Yes':
+            # conditional_proxies += '> \n> '
+            conditional_proxies = '> \n> ' + entry['Polarization Proxies - Explanation'] + '\n{: .prompt-danger}'
+        else:
+            conditional_proxies = '> \n> ' + entry['Polarization Proxies - Explanation'] + '\n{: .prompt-tip}'
 
+        if is_review:
+            conditional_analyses = '{: .prompt-info}'
+            conditional_opendata = '{: .prompt-info}'
+            conditional_prereg = '{: .prompt-info}'
+            conditional_pvals = '{: .prompt-info}'
+            conditional_proxies = '{: .prompt-info}'
+            open_data = 'NA'
+            pre_reg = 'NA'
 
-
-    # generate the markdown file and save
-    post = post_template.format(
-        conditional_replication_link = conditional_replication_link, 
-        journal_link = journal_link,
-        author_link = author_link,
-        open_data = open_data,
-        pre_reg = pre_reg,
-        conditional_prereg = conditional_prereg,
-        conditional_proxies = conditional_proxies,
-        conditional_pvals = conditional_pvals,
-        conditional_causal = conditional_causal,
-        conditional_opendata = conditional_opendata,
-        conditional_analyses = conditional_analyses,
-        tag_list = [tag.replace(' ','-') for tag in entry['Tags'].split(', ')],
-        **entry
-    )
-
-    with open(f'../_posts/{entry["Date published"].date()}-{entry["id"]}.md', 'w') as file:
-        file.write(
-            glossify.glossify(
-                post
-            )
+        # generate the markdown file and save
+        post = post_template.format(
+            conditional_replication_link = conditional_replication_link, 
+            journal_link = journal_link,
+            author_link = author_link,
+            open_data = open_data,
+            pre_reg = pre_reg,
+            conditional_prereg = conditional_prereg,
+            conditional_proxies = conditional_proxies,
+            conditional_pvals = conditional_pvals,
+            conditional_causal = conditional_causal,
+            conditional_opendata = conditional_opendata,
+            conditional_analyses = conditional_analyses,
+            review_article = is_review,
+            tag_list = [tag.replace(' ','-') for tag in entry['Tags'].split(', ')],
+            **entry
         )
+
+        with open(f'../_posts/{entry["Date published"].date()}-{entry["id"]}.md', 'w') as file:
+            file.write(
+                glossify.glossify(
+                    post
+                )
+            )
 
 # ... and we're done
 
