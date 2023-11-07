@@ -6,7 +6,7 @@ set -e
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/"
 
 # ## Get common environment variables
-source ../../../.env
+py3=/prl/code/.envs/py3/bin/python3
 
 # ## Redirect stdout and stderr
 exec &>> ".log"
