@@ -8,14 +8,11 @@ from pandas.core.arrays.period import period_asfreq_arr
 
 # Internal Dependencies
 import glossify
-sys.path.append('../../.utils/')
+sys.path.append('../../.utils/python/')
 import google_sheet_utils
-# import distilldb as ddb
-
 
 # External Dependencies
 import pandas as pd 
-
 
 # Template for a Summary Post
 with open('template.md', 'r') as template_file:

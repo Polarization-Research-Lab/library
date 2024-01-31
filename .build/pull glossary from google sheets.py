@@ -1,9 +1,8 @@
 # Python Standard Lib
 import os, sys
 
-sys.path.append('../../.utils/')
+sys.path.append('../../.utils/python/')
 import google_sheet_utils
-
 
 data = google_sheet_utils.pull(
     '1mbDcYt_QB0uZqSyvQphwmDuzQ3WYNxI1ZMuuEeLLDts', # <-- name
