@@ -9,7 +9,7 @@ cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )/"
 py3=/prl/code/.envs/py3/bin/python3
 
 # ## Redirect stdout and stderr
-exec &>> ".log"
+# exec &>> ".log"
 
 # Execute
 # ## Add Timestamp
